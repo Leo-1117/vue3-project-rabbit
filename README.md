@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+
 # vue3-rabbit
+
+#### 介绍
+
+Leo 的电商项目实战-vue3
 
 This template should help get you started developing with Vue 3 in Vite.
 
