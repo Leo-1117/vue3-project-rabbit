@@ -20,7 +20,7 @@ defineProps({
         </h3>
       </div>
       <!-- 主体内容区域 -->
-      <slot>
+      <slot></slot>
     </div>
   </div>
 </template>
