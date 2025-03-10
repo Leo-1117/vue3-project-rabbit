@@ -3,7 +3,7 @@ import { getCategoryAPI } from "@/apis/category";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 import { onBeforeRouteUpdate } from "vue-router";
-function useCategory() {
+export function useCategory() {
   //获取数据
   const categoryData = ref({});
   const route = useRoute();
@@ -18,6 +18,6 @@ function useCategory() {
     getCategory(to.params.id);
   });
   return {
-    useCategory,
+    categoryData,
   };
 }

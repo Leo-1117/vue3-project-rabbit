@@ -149,3 +149,4 @@ const categoryStore = useCategoryStore();
   }
 }
 </style>
+@/stores/category
