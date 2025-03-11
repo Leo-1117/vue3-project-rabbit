@@ -1,6 +1,13 @@
 <script setup>
 import { useUserStore } from "@/stores/user";
 const userStore = useUserStore();
+
+const confirm = () => {
+  //退出登录
+
+  //清除用户信息 触发action
+  userStore.clearUserInfo();
+};
 </script>
 
 <template>
@@ -15,7 +22,12 @@ const userStore = useUserStore();
             >
           </li>
           <li>
-            <el-popconfirm title="确认退出吗?" confirm-button-text="确认" cancel-button-text="取消">
+            <el-popconfirm
+              @confirm="confirm"
+              title="确认退出吗?"
+              confirm-button-text="确认"
+              cancel-button-text="取消"
+            >
               <template #reference>
                 <a href="javascript:;">退出登录</a>
               </template>
