@@ -14,7 +14,7 @@ onMounted(() => getGoods());
 
 //sku规格被操作时
 const skuChange = (sku) => {
-  conso;
+  console.log("SKU被操作");
 };
 </script>
 
