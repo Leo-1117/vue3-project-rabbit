@@ -29,6 +29,20 @@ const rules = {
     },
   ],
 };
+
+//3.获取form实例做统一校验
+const formRef = ref(null);
+const doLogin = () => {
+  //调用实例方法
+  formRef.value.validate((valid) => {
+    //valid:所有表单都通过校验,才为true
+    console.log(valid);
+    //以valid为判断条件，通过后才执行登录逻辑
+    if (valid) {
+      //LOGIN
+    }
+  });
+};
 </script>
 
 <template>
@@ -53,6 +67,7 @@ const rules = {
         <div class="account-box">
           <div class="form">
             <el-form
+              ref="formRef"
               :model="form"
               :rules="rules"
               label-position="right"
@@ -70,7 +85,7 @@ const rules = {
                   我已同意隐私条款和服务条款
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn">点击登录</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
             </el-form>
           </div>
         </div>
