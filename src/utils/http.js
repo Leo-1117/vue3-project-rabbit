@@ -4,7 +4,7 @@ import { ElMessage } from "element-plus";
 import { useUserStore } from "@/stores/userStore";
 const httpInstance = axios.create({
   baseURL: "http://pcapi-xiaotuxian-front-devtest.itheima.net",
-  timeout: 20000,
+  timeout: 200000,
 });
 
 // 拦截器
