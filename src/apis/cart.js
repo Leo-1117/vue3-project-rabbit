@@ -18,3 +18,12 @@ export const findNewCartListAPI = () => {
     url: "/member/cart",
   });
 };
+
+//delete cartStore
+export const delCartAPI = (ids) => {
+  return request({
+    url: "/member/cart",
+    method: "DELETE",
+    data: { ids },
+  });
+};
