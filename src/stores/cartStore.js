@@ -51,6 +51,11 @@ export const useCartStore = defineStore(
       }
     };
 
+    //clearCart
+    const clearCart = () => {
+      cartList.value = [];
+    };
+
     //单选
     const singleCheck = (skuId, selected) => {
       //通过skuId,找到需要修改的一项
@@ -91,6 +96,7 @@ export const useCartStore = defineStore(
       allCheck,
       selectedCount,
       selectedPrice,
+      clearCart,
     };
   },
   {
